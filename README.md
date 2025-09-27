@@ -4,7 +4,7 @@
 3. 课件文档和代码一一对应，课件文档的需要和所在代码的文件名相同，
 
 ## 2. 计划
-1. 第一步：golang课程建设 [golang专题](golang/index.md)
+1. 第一步：golang课程建设 [golang专题](docs/golang/index.md)
 2. 第二步：Redis课程建设
 3. 第三步：MySQL课程建设
 4. 第四步：消息队列课程建设
