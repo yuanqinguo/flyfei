@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket基础演示</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; }
+        .container { border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
+        #messages { height: 300px; border: 1px solid #ccc; padding: 10px; overflow-y: scroll; margin-bottom: 10px; }
+        input[type="text"] { width: 70%; padding: 8px; }
+        button { padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>WebSocket基础聊天演示</h2>
+        <div id="messages"></div>
+        <div>
+            <input type="text" id="messageInput" placeholder="输入消息...">
+            <button onclick="sendMessage()">发送</button>
+            <button onclick="connect()" style="background: #28a745;">连接</button>
+            <button onclick="disconnect()" style="background: #dc3545;">断开</button>
+        </div>
+        <div style="margin-top: 20px; color: #666;">
+            <p><strong>操作流程：</strong></p>
+            <ol>
+                <li>点击"连接"建立WebSocket连接</li>
+                <li>在输入框输入消息并发送</li>
+                <li>观察服务器返回的响应</li>
+                <li>点击"断开"关闭连接</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        let ws = null;
+        
+        function addMessage(message, isSystem = false) {
+            const messages = document.getElementById('messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.style.padding = '5px';
+            messageDiv.style.borderBottom = '1px solid #eee';
+            if (isSystem) {
+                messageDiv.style.color = 'green';
+                messageDiv.style.fontStyle = 'italic';
+            }
+            messageDiv.textContent = message;
+            messages.appendChild(messageDiv);
+            messages.scrollTop = messages.scrollHeight;
+        }
+        
+        function connect() {
+            if (ws && ws.readyState === WebSocket.OPEN) {
+                addMessage('已经连接到服务器了', true);
+                return;
+            }
+            
+            ws = new WebSocket('ws://localhost:8080/ws');
+            
+            ws.onopen = function() {
+                addMessage('✅ WebSocket连接已建立!', true);
+            };
+            
+            ws.onmessage = function(event) {
+                addMessage('服务器: ' + event.data);
+            };
+            
+            ws.onclose = function() {
+                addMessage('❌ WebSocket连接已关闭', true);
+            };
+            
+            ws.onerror = function(error) {
+                addMessage('❌ WebSocket错误: ' + error, true);
+            };
+        }
+        
+        function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const message = input.value.trim();
+            
+            if (!message) {
+                alert('请输入消息');
+                return;
+            }
+            
+            if (!ws || ws.readyState !== WebSocket.OPEN) {
+                alert('请先建立WebSocket连接');
+                return;
+            }
+            
+            ws.send(message);
+            addMessage('我: ' + message);
+            input.value = '';
+        }
+        
+        function disconnect() {
+            if (ws) {
+                ws.close();
+                ws = null;
+            }
+        }
+        
+        // 按回车发送消息
+        document.getElementById('messageInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>
