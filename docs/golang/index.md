@@ -41,9 +41,9 @@
 - [3. 同步原语](advance/3.同步原语.md)
 - [4. 并发模式](advance/4.并发模式.md)
 #### Go语言网络编程
-- [5. TCP-IP网络基础.md](advance/5.TCP-IP网络基础.md)
-- [6. Http编程.md](advance/6.http编程.md)
-- [7. websocket编程.md](advance/7.websocket编程.md)
+- [5. TCP-IP网络基础](advance/5.TCP-IP网络基础.md)
+- [6. Http编程](advance/6.http编程.md)
+- [7. websocket编程](advance/7.websocket编程.md)
 
 #### Go语言Web开发基础
-- [8. Web开发流程.md](advance/8.Web开发流程.md)
+- [8. Web开发流程](advance/8.web开发流程.md)
