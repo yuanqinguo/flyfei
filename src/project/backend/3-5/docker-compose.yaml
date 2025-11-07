@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  etcd:
+    image: bitnami/etcd:3.5.13
+    container_name: etcd-server
+    ports:
+      - "2379:2379"
+      - "2380:2380"
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd:2379   # 对外公告的地址
+      - ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379        # 关键修改：监听所有网络接口
+    volumes:
+      - etcd_data:/bitnami/etcd
+
+  etcdkeeper:
+    image: evildecay/etcdkeeper:latest
+    container_name: etcd-ui
+    ports:
+      - "8080:8080"
+    environment:
+      - ETCD_SERVERS=http://etcd:2379  # 关键修改：使用etcd的服务名进行连接
+    depends_on:
+      - etcd
+
+volumes:
+  etcd_data:
+    driver: local

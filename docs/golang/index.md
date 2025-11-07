@@ -55,3 +55,5 @@
 - [1. 产品需求分析](project/1.产品需求.md)
 - [2. 技术方案文档框架](project/2.技术文档框架.md)
 - [3. Mysql简单使用](project/3.mysql选型简单使用.md)
+- [4. Git协作流程简单使用](project/4.Git协作流程简单使用.md)
+- [5. 服务配置和环境变量](project/5.服务配置和环境变量.md)

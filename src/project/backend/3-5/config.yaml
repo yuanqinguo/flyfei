@@ -1,0 +1,31 @@
+app:
+  name: "mall"
+  port: 8080
+  debug: true
+  version: "1.0.0"
+  environment: "dev"
+
+database:
+  host: "localhost"
+  port: 5432
+  username: "admin"
+  password: "password"
+  name: "mydb"
+
+redis:
+  host: "127.0.0.1"
+  port: 6379
+  password: ""
+  db: 0
+
+log:
+  level: "info"
+  path: "./logs"
+  max_size: 100
+  max_backups: 10
+
+email:
+  smtp_host: "smtp.gmail.com"
+  smtp_port: 587
+  username: "user@gmail.com"
+  password: "password"
