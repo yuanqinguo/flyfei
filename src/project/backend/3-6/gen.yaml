@@ -1,0 +1,21 @@
+version: "0.1"
+database:
+  dsn: "root:123456@tcp(127.0.0.1:3306)/edu.mall?charset=utf8mb4&parseTime=true&loc=Local"
+  db: "mysql"
+  tables:
+  - users
+  - user_profile
+  # 指定生成的查询代码文件的输出目录
+  outPath: "./query"
+  # 指定查询代码的主文件名 gen.go
+  outFile: ""
+  # 是否为查询代码生成单元测试
+  withUnitTest: false
+  # 指定生成的模型代码的包名
+  modelPkgName: "model"
+  # 当字段可为空时是否生成指针类型
+  fieldNullable: true
+  # 是否为字段生成GORM索引标签,在GORM标签中包含索引信息，如gorm:"index"
+  fieldWithIndexTag: false
+  # 是否为字段生成GORM列类型标签,在GORM标签中包含完整的列类型信息
+  fieldWithTypeTag: false
