@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0  # 使用8.0版本的 MySQL 镜像
+    container_name: my-mysql  # 容器名称
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456  # 设置 MySQL root 用户的密码
+    ports:
+      - "3306:3306"  # 将容器的 3306 端口映射到宿主机的 3306 端口
+    volumes:
+      - /data/mysql:/var/lib/mysql  # 将宿主机的 /data/mysql 目录挂载到容器的 /var/lib/mysql 目录
+    restart: always  # 容器退出后总是重启
