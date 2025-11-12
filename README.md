@@ -12,7 +12,10 @@
 
 
 ## 关于大秦
-大秦，标准90后， 公众号：大秦说AI， 课件博客：https://yuanqinguo.github.io/flyfei/
+- 微信号：qingflyfei
+- 公众号： 大秦说AI
+- 标准90后， 公众号：大秦说AI
+- 课件地址：https://yuanqinguo.github.io/flyfei/
 ### 专业背景
 - 12年+一线各类项目开发经验，熟练C++, Python, Go的开发经验
 
