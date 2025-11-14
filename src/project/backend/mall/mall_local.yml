@@ -1,0 +1,25 @@
+
+server:
+  http_port: 8080
+  enable_pprof: true
+  log_level: debug
+  env: dev
+
+mysql:
+  dialect: mysql
+  user: root
+  password: 123456
+  host: 127.0.0.1
+  port: 3306
+  database: edu.mall
+  charset: utf8mb4
+  show_mysql: true
+  max_open: 20
+  max_idle: 5
+
+redis:
+  addr: 127.0.0.1:6379
+  password: ""
+  db_index: 0
+  max_idle: 2
+  max_open: 10
