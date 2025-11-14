@@ -12,6 +12,7 @@ import (
 	"os/signal"
 	"strconv"
 	"syscall"
+	"time"
 )
 
 type App struct {
@@ -55,5 +56,7 @@ func (app *App) Run() {
 	signal.Notify(closeCh, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
 	msg := <-closeCh
 	logger.Warn("server closing: ", zap.String("msg", msg.String()))
-	srv.Shutdown(context.TODO())
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*5)
+	defer cancel()
+	_ = srv.Shutdown(ctx)
 }
