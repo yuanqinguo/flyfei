@@ -28,18 +28,23 @@ func main() {
 }
 
 func startServer(conf *config.Config, db *gorm.DB, redis *redis.Client) *router.App {
-	adaptor := adaptor.NewAdaptor(conf, db, redis)
-	return router.NewApp(conf.Server.HttpPort, router.NewRouter(conf, adaptor, func() error {
-		err := func() error {
-			pingDb, err := db.DB()
-			handleErr(err)
-			return pingDb.Ping()
-		}()
-		if err != nil {
-			return errors.New("mysql connect failed")
-		}
-		return redis.Ping().Err()
-	}))
+	return router.NewApp(conf.Server.HttpPort,
+		router.NewRouter(
+			conf,
+			adaptor.NewAdaptor(conf, db, redis),
+			func() error {
+				err := func() error {
+					pingDb, err := db.DB()
+					handleErr(err)
+					return pingDb.Ping()
+				}()
+				if err != nil {
+					return errors.New("mysql connect failed")
+				}
+				return redis.Ping().Err()
+			},
+		),
+	)
 }
 
 func initRedis(conf *config.Redis) (*redis.Client, error) {
