@@ -1,0 +1,20 @@
+.tree-form {
+  .ant-tree {
+    &-treenode {
+      width: 100%;
+    }
+
+    &-node-content-wrapper {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.ant-spin-nested-loading {
+  height: 100%;
+
+  .ant-spin-container {
+    height: 100%;
+  }
+}

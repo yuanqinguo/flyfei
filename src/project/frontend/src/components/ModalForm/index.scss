@@ -1,0 +1,13 @@
+.modal-form-footer {
+  $modal-body-padding: 24px;
+  margin: 0 (-$modal-body-padding);
+  margin-bottom: 10px - $modal-body-padding;
+  padding: 10px 16px 4px;
+  text-align: right;
+  border-top: 1px solid #f0f0f0;
+
+  button + button {
+    margin-bottom: 0;
+    margin-left: 8px;
+  }
+}

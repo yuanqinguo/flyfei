@@ -1,0 +1,59 @@
+.fast-table {
+  &-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px 16px;
+    background: #fff;
+
+    &-title {
+      font-size: 1.2em;
+    }
+
+    &-title-selected {
+      font-size: 16px;
+    }
+
+    &-title-selected-count {
+      color: #fc8800;
+    }
+
+    &-options {
+      font-size: 1.1em;
+    }
+
+    &-actions {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-column-setting-content {
+    .ant-typography {
+      font-size: 0.8em;
+      line-height: 2;
+    }
+  }
+
+  &-column-setting-item-row {
+    margin-bottom: 5px;
+
+    &:hover {
+      .column-fixed-setting {
+        display: block;
+      }
+    }
+
+    .column-fixed-setting {
+      display: none;
+
+      .anticon {
+        cursor: pointer;
+      }
+
+      .anticon + .anticon {
+        margin-left: 0.5em;
+      }
+    }
+  }
+}
