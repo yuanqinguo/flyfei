@@ -10,6 +10,8 @@ require (
 	github.com/samber/lo v1.52.0
 	github.com/spf13/viper v1.21.0
 	github.com/spf13/viper/remote v1.21.0
+	github.com/wenlng/go-captcha-assets v1.0.7
+	github.com/wenlng/go-captcha/v2 v2.0.4
 	go.uber.org/zap v1.27.0
 	gorm.io/driver/mysql v1.6.0
 	gorm.io/gen v0.3.27
@@ -45,6 +47,7 @@ require (
 	github.com/go-viper/mapstructure/v2 v2.4.0 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
+	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/s2a-go v0.1.9 // indirect
 	github.com/google/uuid v1.6.0 // indirect
@@ -106,6 +109,7 @@ require (
 	golang.org/x/arch v0.20.0 // indirect
 	golang.org/x/crypto v0.41.0 // indirect
 	golang.org/x/exp v0.0.0-20250305212735-054e65f0b394 // indirect
+	golang.org/x/image v0.16.0 // indirect
 	golang.org/x/mod v0.27.0 // indirect
 	golang.org/x/net v0.43.0 // indirect
 	golang.org/x/oauth2 v0.30.0 // indirect

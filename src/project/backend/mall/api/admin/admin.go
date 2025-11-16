@@ -6,11 +6,11 @@ import (
 )
 
 type Ctrl struct {
-	adaptor *adaptor.Adaptor
+	adaptor adaptor.IAdaptor
 	user    *admin.Service
 }
 
-func NewCtrl(adaptor *adaptor.Adaptor) *Ctrl {
+func NewCtrl(adaptor adaptor.IAdaptor) *Ctrl {
 	return &Ctrl{
 		adaptor: adaptor,
 		user:    admin.NewService(adaptor),

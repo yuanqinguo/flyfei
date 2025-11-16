@@ -38,5 +38,6 @@ var (
 	DatabaseErr = Errno{Code: 10000, Msg: "Database Error"}
 	RedisErr    = Errno{Code: 10001, Msg: "Redis Error"}
 
-	UserNotFoundErr = Errno{Code: 11001, Msg: "User Not Found"}
+	UserNotFoundErr   = Errno{Code: 11001, Msg: "User Not Found"}
+	InvalidCaptchaErr = Errno{Code: 11002, Msg: "滑块校验失败，请重试"}
 )
