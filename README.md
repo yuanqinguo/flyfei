@@ -5,7 +5,7 @@
 
 ## 2. 计划
 1. 第一步：golang课程建设 [golang专题](docs/golang/index.md)
-2. 第二步：Redis课程建设
+2. 第二步：Redis课程建设 [Redis专题](docs/redis/index.md)
 3. 第三步：MySQL课程建设
 4. 第四步：消息队列课程建设
 5. 第五步：微服务课程建设
