@@ -6,9 +6,9 @@ import (
 )
 
 type GetVerifyCaptchaReq struct {
-	Once string `url:"once"`
-	Time int64  `url:"ts"`
-	Sign string `url:"sign"` // 秘钥固定加密： md5(once+daqing2025+ts) 转小写
+	Once string `form:"once"`
+	Time int64  `form:"ts"`
+	Sign string `form:"sign"` // 秘钥固定加密： md5(once+daqing2025+ts) 转小写
 }
 
 func (r *GetVerifyCaptchaReq) CheckSign() bool {
