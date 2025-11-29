@@ -38,6 +38,7 @@ func orderProcessor(orderChan <-chan Order, resultChan chan<- Order) {
 		order.Status = "completed"
 		resultChan <- order
 	}
+	time.Sleep(time.Second * 2)
 	close(resultChan)
 }
 
@@ -116,16 +117,24 @@ func main() {
 		jobs <- i
 	}
 	close(jobs)
-	for value := range results {
+	// 方法一，等待一段时间后关闭结果通道，需要自己判断一个任务需要多久来进行处理sleep时长
+	//time.Sleep(time.Second * 1)
+	//close(results)
+	//for value := range results {
+	//	fmt.Println("result:", value)
+	//}
+	// 方法二，循环放入的job的数据量次数后关闭结果通道
+	for i := 0; i < 100; i++ {
+		value := <-results
 		fmt.Println("result:", value)
 	}
+
 }
 
 func worker(jobs <-chan int, results chan<- int) {
 	for j := range jobs {
 		fmt.Println("worker:", j)
-		time.Sleep(time.Second)
+		time.Sleep(time.Millisecond)
 		results <- j * 2
 	}
-	close(results)
 }
