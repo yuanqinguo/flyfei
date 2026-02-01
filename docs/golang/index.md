@@ -1,4 +1,5 @@
-
+## github仓库
+- https://github.com/yuanqinguo/flyfei/tree/master
 ## 课程介绍
 - [课程介绍](intro/1-课程介绍.md)
 - [课程大纲](intro/2-go教学课程大纲.md)
