@@ -2,6 +2,7 @@
 1. docs目录下是所有课件文档，markdown格式
 2. src目录下是所有课件代码，go语言实现
 3. 课件文档和代码一一对应，课件文档的需要和所在代码的文件名相同，
+4. github地址：https://github.com/yuanqinguo/flyfei
 
 ## 2. 计划
 1. 第一步：golang课程建设 [golang专题](docs/golang/index.md)
