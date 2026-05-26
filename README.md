@@ -16,8 +16,8 @@
 - 公众号： 大秦说AI
 - 标准90后，目前在公司负责产品战略，技术架构、技术管理和渠道市场相关工作
 - 课件地址：https://yuanqinguo.github.io/flyfei/
-- 商城正式环境：https://qingfly.com, 2026.5.16日正式发布生产,购买对应课程即可学习，获取配套产品，技术文档
-- 测试可用地址：https://dev.qingfly.com（用户端），https://dev-admin.qingfly.com(管理端)，购买商城课程后，联系大秦获取管理端测试账号
+- 商城正式环境：[轻飞商城](https://qingfly.com), 2026.5.16日正式发布生产,购买对应课程即可学习，获取配套产品，技术文档
+- 测试可用地址：[用户端](https://dev.qingfly.com)，[管理端](https://dev-admin.qingfly.com)，购买商城课程后，联系大秦获取管理端测试账号
 ### 专业背景
 - 12年+一线各类项目开发经验，熟练C++, Python, Go的开发经验
 
