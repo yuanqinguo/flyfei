@@ -7,6 +7,8 @@ require (
 	github.com/go-redis/redis v6.15.9+incompatible
 	github.com/goccy/go-yaml v1.18.0
 	github.com/gogf/gf v1.16.9
+	github.com/google/uuid v1.6.0
+	github.com/panjf2000/ants/v2 v2.12.1
 	github.com/samber/lo v1.52.0
 	github.com/spf13/viper v1.21.0
 	github.com/spf13/viper/remote v1.21.0
@@ -50,7 +52,6 @@ require (
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/s2a-go v0.1.9 // indirect
-	github.com/google/uuid v1.6.0 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.3.6 // indirect
 	github.com/googleapis/gax-go/v2 v2.15.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.26.3 // indirect
