@@ -55,7 +55,7 @@ func (p Person) String() string {
 	return fmt.Sprintf("Name: %s, Age: %d", p.Name, p.Age)
 }
 
-func main() {
+func main1() {
 	var str string = "hello1" // 标准定义
 	var str2 = "hello2"       // 类型推导
 	str3 := "hello3"          // 短定义（简单定义）
