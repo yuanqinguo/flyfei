@@ -1,3 +1,11 @@
+# 轻飞商城 Go 后端课程配套代码
+
+本仓库由轻飞商城讲师大秦维护，提供 Go/Golang 后端、Redis、WebSocket、IM、微服务与 AI Agent 实战课程的配套文档和示例代码。
+
+- 课程官网：[轻飞商城](https://qingfly.com/home)
+- 课程地图：[Go/Golang 后端实战课程](https://qingfly.com/home#featured-courses-title)
+- 讲师介绍：[大秦](https://qingfly.com/home#instructor-profile-title)
+
 ## 1. 项目介绍
 1. docs目录下是所有课件文档，markdown格式
 2. src目录下是所有课件代码，go语言实现
@@ -6,7 +14,7 @@
 
 ## 2. 计划
 1. 第一步：golang课程建设 [golang专题](docs/golang/index.md)
-2. 第二步：Redis课程建设，已完成课程建设，可前往[轻飞商城](https://qingfly.com)或B站关注“**大秦的勤**”，购买Redis核心技术实战课程获取
+2. 第二步：Redis课程建设，已完成课程建设，可前往[轻飞商城](https://qingfly.com/home)或B站关注“**大秦的勤**”，购买Redis核心技术实战课程获取
 3. 第三步：MySQL课程建设，待定
 4. 第四步：消息队列课程建设，待定
 5. 第五步：微服务课程建设，该课程会在2026年完成对商城项目+IM项目+websocket项目配套完成，集成到轻飞商城
@@ -17,7 +25,7 @@
 - 公众号： 大秦说AI
 - 标准90后，目前在公司负责产品战略，技术架构、技术管理和渠道市场相关工作
 - 课件地址：https://yuanqinguo.github.io/flyfei/
-- 商城正式环境：[轻飞商城](https://qingfly.com), 2026.5.16日正式发布生产,购买对应课程即可学习，获取配套产品，技术文档
+- 商城正式环境：[轻飞商城](https://qingfly.com/home), 2026.5.16日正式发布生产,购买对应课程即可学习，获取配套产品，技术文档
 - 测试可用地址：[用户端](https://dev.qingfly.com)，[管理端](https://dev-admin.qingfly.com)，购买商城课程后，联系大秦获取管理端测试账号
 ### 专业背景
 - 12年+一线各类项目开发经验，熟练C++, Python, Go的开发经验
